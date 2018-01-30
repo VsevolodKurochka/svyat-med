@@ -1,0 +1,38 @@
+-
+	var compositions = [
+		{
+			img: 'img/items1.jpg',
+			title: 'Кедровий горіх',
+			content: 'Регулярне вживання сприяє відновленню гостроти зору, зміцненню імунітету і покращення функції залоз внутрішньої секреції'
+		},
+		{
+			img: 'img/items2.jpg',
+			title: 'Волоський горіх',
+			content: 'підвищує імунітет, допомагає підтримувати енергетичні запаси організму, покращує працездатність'
+		},
+		{
+			img: 'img/items3.jpg',
+			title: 'Кешью',
+			content: 'містить 18 незамінних амінокислот, благотворно впливає на імунітет, рівень холестерину в крові, обмінні процеси. Допомагає при зубному болю, є хорошою профілактикою і підтримкою організму'
+		},
+		{
+			img: 'img/items4.jpg',
+			title: 'Мигдаль',
+			content: 'Багатий на кальцій і вітамін Е, знижує рівень холестерину, допомагає при головних болях, покращує вашу пам\'ять і зір'
+		}
+	];
+
++b.SECTION.composition
+	.container
+		.row
+			each composition in compositions
+				.col-12.col-sm-6.col-md-3
+					+e.item.flip-container(ontouchstart="this.classList.toggle('hover');")
+						+e.item-flipper.flipper
+							+e.item-front.front
+								+e.item-front-image(src=composition.img)
+							+e.item-back.back
+								+e.item-back-content
+									+e.P.item-back-title=composition.title
+									+e.item-back-text
+										p=composition.content
