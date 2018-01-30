@@ -27,7 +27,7 @@
 +b.SECTION.why
 	.container
 		+e.H3.title.title-md=whyTitle
-		+e.content
+		+e.content.row
 			each reason in reasons
 				+e.column.col-12.col-sm-6
 					+e.item.flip-container(ontouchstart="this.classList.toggle('hover');")
@@ -35,6 +35,7 @@
 							+e.item-front.front
 								+e.item-front-image(src=reason.img)
 							+e.item-back.back
+								+e.item-back-background(src=reason.img)
 								+e.item-back-content
 									+e.P.item-back-title=reason.title
 									+e.item-back-text

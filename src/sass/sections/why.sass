@@ -1,0 +1,49 @@
++b('why')
+	+e('column')
+		margin-bottom: 30px
+
+	+e('item')
+		@at-root
+			%composition-size
+				+size(100%, 320px)
+			%composition-block
+				border: 20px solid $color-brand-1
+
+		@extend %composition-size
+
+		+ee('front')
+			text-align: center
+			background-color: $color-white
+
+			@extend %composition-size
+			@extend %composition-block
+
+			+ee('image')
+				+size(100%)
+				object-fit: cover
+
+		+ee('back')
+			display: flex
+			align-items: center
+			justify-content: center
+			text-align: center
+
+			background-color: $color-brand-1
+
+			@extend %composition-size
+			@extend %composition-block
+		
+			+ee('title')
+				font-size: 18px
+				font-weight: bold
+
+				+min(lg)
+					font-size: 24px
+
+			+ee('text')
+				font-size: 12px
+				+padding-x(5px)
+
+				+min(lg)
+					font-size: 13px
+					+padding-x(15px)
