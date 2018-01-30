@@ -28,10 +28,24 @@
 			justify-content: center
 			text-align: center
 
-			background-color: $color-brand-1
-
 			@extend %composition-size
 			@extend %composition-block
+
+			&:before
+				content: ''
+				+absolute(0, null, null, 0)
+				+size(100%)
+				background-color: transparentize($color-brand-1, 0.5)
+
+			+ee('background')
+				+absolute(0,null,null,0)
+				+size(100%)
+				object-fit: cover
+				transform: scaleX(-1)
+
+			+ee('content')
+				+relative
+				z-index: 1
 		
 			+ee('title')
 				font-size: 18px
