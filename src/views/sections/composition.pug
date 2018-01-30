@@ -22,9 +22,24 @@
 		}
 	];
 
+	var benefits = [
+		{
+			img: 'img/benefit_1.png',
+			title: 'Перекуси з користю для здоров\'я',
+			content: 'Полюбляєте перекуси? Горішки з медом смачний і корисний перекус на роботі і вдома. Горіхи насичені білками, незамінними амінокислотами і жирами, саме тому вони є важливою частиною будь-якої дієти. Цілющий вплив меду на організм надають більше 300 компонентів, знайдених в його складі. Як і горіхи, мед містить великий комплекс вітамінів і органічних кислот. Кілька ложок нашого десерту допоможе зберегти працездатність, наситить організм корисними вітамінами і мінералами.'
+		},
+		{
+			img: 'img/benefit_2.png',
+			title: 'Тільки перевірені, 100% натуральні продукти.',
+			content: 'Один неякісний горіх може зіпсувати всю банку - ми гарантуємо з нашою продукцією такого не станеться.Ми дуже ретельно підбираємо всі інгредієнти для наших десертів. Використовуємо тільки перевірених постачальників. Робимо для наших клієнтів як для самих себе.'
+		}
+	];
+
+	var benefitButton = 'ЗАМОВИТИ';
+
 +b.SECTION.composition
 	.container
-		.row
+		+e.items.row
 			each composition in compositions
 				.col-12.col-sm-6.col-md-3
 					+e.item.flip-container(ontouchstart="this.classList.toggle('hover');")
@@ -36,3 +51,16 @@
 									+e.P.item-back-title=composition.title
 									+e.item-back-text
 										p=composition.content
+		+e.content
+			each benefit in benefits
+				+e.benefit.row
+					.col-12.col-sm-6
+						+e.benefit-image
+							img(src=benefit.img)
+					.col-12.col-sm-6
+						+e.benefit-content
+							+e.H4.benefit-title.title-md=benefit.title
+							+e.benefit-text
+								p=benefit.content
+							+e.benefit-content-footer
+								+b.BUTTON.btn._size-lg._border-brand-1._arrow.effect._bounce-top(data-action="modal" data-open="#example-id")=benefitButton

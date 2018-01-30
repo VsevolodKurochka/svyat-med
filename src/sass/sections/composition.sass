@@ -45,11 +45,25 @@
   transform: rotateX(180deg)
 
 +b('composition')
+
+	+relative
+
+	padding-bottom: 45px
+
+	z-index: 2
+	
+	background-color: #191919
+
+
+	+e('items')
+		position: relative
+		top: -45px
+		margin-bottom: 60px
+
 	+e('item')
 		@at-root
 			%composition-size
-				+min(lg)
-					+size(290px, 175px)
+				+size(105%, 175px)
 			%composition-block
 				border: 2px solid $color-brand-1
 
@@ -83,3 +97,33 @@
 			+ee('text')
 				font-size: 13px
 				+padding-x(15px)
+
+	+e('benefit')
+		&:nth-child(even)
+			flex-direction: row-reverse
+			+b('composition')
+				+e('benefit')
+					+ee('content')
+						text-align: right
+
+		&:not(:last-child)
+			margin-bottom: 45px
+
+		+min(sm)
+			align-items: center
+
+		+ee('image')
+			text-align: center
+
+		+ee('title')
+			color: #909090
+			margin-bottom: 30px
+
+		+ee('text')
+			color: #505050
+			margin-bottom: 30px
+
+			font-size: 16px
+
+			+min(sm)
+				margin-bottom: 45px
