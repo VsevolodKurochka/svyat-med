@@ -41,7 +41,7 @@
 	.container
 		+e.items.row
 			each composition in compositions
-				.col-12.col-sm-6.col-md-3
+				+e.column.col-12.col-sm-6.col-md-3
 					+e.item.flip-container(ontouchstart="this.classList.toggle('hover');")
 						+e.item-flipper.flipper
 							+e.item-front.front

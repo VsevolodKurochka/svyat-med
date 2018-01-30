@@ -1,0 +1,41 @@
+-
+	var whyTitle = 'Чому варто придбати Медові горішки?';
+	
+	var reasons = [
+		{
+			img: 'img/why1.jpg',
+			title: 'Корисно',
+			content: 'Має цілющі властивості'
+		},
+		{
+			img: 'img/why2.jpg',
+			title: 'Корисно',
+			content: 'Має цілющі властивості'
+		},
+		{
+			img: 'img/why3.jpg',
+			title: 'Корисно',
+			content: 'Має цілющі властивості'
+		},
+		{
+			img: 'img/why4.jpg',
+			title: 'Корисно',
+			content: 'Має цілющі властивості'
+		}
+	];
+
++b.SECTION.why
+	.container
+		+e.H3.title.title-md=whyTitle
+		+e.content
+			each reason in reasons
+				+e.column.col-12.col-sm-6
+					+e.item.flip-container(ontouchstart="this.classList.toggle('hover');")
+						+e.item-flipper.flipper
+							+e.item-front.front
+								+e.item-front-image(src=reason.img)
+							+e.item-back.back
+								+e.item-back-content
+									+e.P.item-back-title=reason.title
+									+e.item-back-text
+										p=reason.content

@@ -58,12 +58,22 @@
 	+e('items')
 		position: relative
 		top: -45px
-		margin-bottom: 60px
+		margin-bottom: 15px
+
+		+min(md)
+			margin-bottom: 60px
+
+	+e('column')
+		+max(md)
+			margin-bottom: 30px
 
 	+e('item')
 		@at-root
 			%composition-size
-				+size(105%, 175px)
+				+size(100%, 175px)
+
+				+min(md)
+					width: 105%
 			%composition-block
 				border: 2px solid $color-brand-1
 
@@ -88,15 +98,19 @@
 			@extend %composition-block
 		
 			+ee('title')
-				font-size: 20px
+				font-size: 18px
 				font-weight: bold
 
-				+min(sm)
+				+min(lg)
 					font-size: 24px
 
 			+ee('text')
-				font-size: 13px
-				+padding-x(15px)
+				font-size: 12px
+				+padding-x(5px)
+
+				+min(lg)
+					font-size: 13px
+					+padding-x(15px)
 
 	+e('benefit')
 		&:nth-child(even)
