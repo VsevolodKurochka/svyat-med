@@ -16,8 +16,12 @@
 //@include connect-font(ProximaBold,bold);
 //@include connect-font(ProximaBlack,black);
 
-.font-general
-  font-family: 'Open Sans', sans-serif
++connect-font('Segoesc', segoesc, ttf)
+
+.font
+
+  &-general
+    font-family: 'Open Sans', sans-serif
 
 @each $weight-name, $weight-value in $weights
   .weight-#{$weight-name}

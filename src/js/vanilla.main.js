@@ -149,12 +149,25 @@
 				this.addition.addEventListener( 'click', (e) => this.additionClick(e, this) );
 			}
 
-			this.linksScroll();
-			
-			
-			// this.buttons.forEach( (button) => {
-			// 	button.addEventListener('click', (e) => this._showButtonClick(e, this));
-			// });
+			//this.linksScroll();
+
+			if(exists(this.navigation)) {
+				this.navigationScroll();
+			}
+
+		}
+
+		checkScrollY() {
+			console.log(1);
+			window.scrollY > 0 ? addClass(this.navigation, 'nav_scrolled') : removeClass(this.navigation, 'nav_scrolled');
+		}
+
+		navigationScroll(){
+
+			this.checkScrollY();
+
+			window.addEventListener("scroll", this.checkScrollY );
+
 		}
 
 		hamburgerClick(el) {

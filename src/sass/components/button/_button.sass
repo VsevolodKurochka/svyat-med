@@ -8,17 +8,15 @@
 	+btn-size($btn-default-padding, $btn-default-size)
 
 	border: none
-	border-radius: 0
+	border-radius: 3px
 	text-decoration: none
-	font-size: 18px
+	font-weight: 400
 	line-height: 1.4
 	-webkit-tap-highlight-color: transparent
 	outline: none
 	transform: translateZ(0)
 
 	+transition
-
-	+weight('bold')
 
 
 +b("btn")
@@ -59,6 +57,25 @@
 
 		+min(md)
 			background-color: $color-brand-1
+
+	+m('arrow')
+		padding-right: 45px
+
+		background-color: transparentize($color-black, 0.5)
+
+		&:after
+			content: ''
+			+absolute(50%, 15px)
+			margin-top: -6px
+			+size(18px, 12px)
+			+bg('../img/arrow.svg')
+			+transition
+
+		&:hover
+			background-color: $color-black
+			padding-right: 55px
+			&:after
+				transform: translateX(5px)
 
 	//-
 	//- Iteration button fluid color

@@ -1,4 +1,6 @@
 +b($themeNav)
+	+transition
+
 	+e("row")
 		justify-content: space-between
 		align-items: center
@@ -27,4 +29,16 @@
 
 
 	+min(md)
-		padding: 25px 0
+		padding: 15px 0
+
+		+m('scrolled')
+			background-color: $color-black
+
+			+b($themeNav)
+				+e('logo')
+					+ee('content')
+						+ee('img')
+							height: 45px
+				+e('addition')
+					+ee('link')
+						font-size: 20px

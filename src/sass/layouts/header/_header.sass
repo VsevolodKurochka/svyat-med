@@ -1,5 +1,35 @@
 +b("header")
-  position: relative
-  z-index: z("default")
+	+relative
+	+padding-y(45px)
+	z-index: 1
+	color: $color-white
+	+bg('../img/bg-header.jpg')
 
-  //@include bg('');
+	+min(md)
+		+padding-y(200px, 80px)
+
+	+e('content')
+		text-align: center
+		max-width: 470px
+
+		+min(sm)
+			margin-left: 100px
+
+	+e('title')
+		display: inline-block
+		+margin-y(0, 30px)
+		padding-bottom: 25px
+		border-bottom: 2px solid $color-brand-1
+
+		+min(sm)
+			padding-bottom: 40px
+
+	+e('subtitle')
+		margin-bottom: 30px
+
+	+e('price')
+		font-size: 25px
+		margin-bottom: 15px
+		+min(sm)
+			margin-bottom: 30px
+			font-size: 36px
