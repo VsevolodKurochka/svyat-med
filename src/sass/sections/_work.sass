@@ -20,8 +20,24 @@
 
 	+e('item')
 
+		text-align: center
+
 		+ee('icon')
 			height: 55px
 
 		+ee('title')
 			color: $color-white
+
+		+min(sm)
+			+absolute
+
+			+m('1')
+
+		+min(lg)
+			top: 145px
+			+m('1')
+				left: 175px
+			+m('2')
+				left: 430px
+			+m('3')
+				left: 715px
