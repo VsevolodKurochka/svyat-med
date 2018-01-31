@@ -7,3 +7,21 @@
 		text-align: center
 		margin-bottom: 30px
 		color: $color-black
+
+	+e('content')
+
+		+relative
+
+
+		+min(sm)
+			height: 340px
+
+			+bg('../img/bg-work.png')
+
+	+e('item')
+
+		+ee('icon')
+			height: 55px
+
+		+ee('title')
+			color: $color-white
