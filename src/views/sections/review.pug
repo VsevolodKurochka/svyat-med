@@ -1,7 +1,12 @@
 -
 	var reviewTitle = 'Відгуки';
-	var infoTitle = 'Про нас';
-
+	
+	var info = {
+		title: 'Про нас',
+		subtitle: 'Контакти',
+		email: 'Partynuts2017@gmail.com',
+		phone: '+380734505904'
+	}
 	
 	var reviews = [
 		{
@@ -36,3 +41,8 @@
 								+e.item-footer
 									+e.item-image(src=review.image)
 				+e.column._info.col-12.col-sm-5
+					+e.H3.title.title-md=info.title
+					+e.info
+						+e.P.info-subtitle=info.subtitle
+						+e.A.info-link(href=info.email)=info.email
+						+e.A.info-link(href=info.phone)=info.phone
