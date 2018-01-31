@@ -16,7 +16,10 @@
 		+min(sm)
 			height: 340px
 
-			+bg('../img/bg-work.png')
+			+bg('../img/bg-work.png', 27% 0)
+
+		+min(md)
+			background-position-x: 0%
 
 	+e('item')
 
@@ -27,11 +30,37 @@
 
 		+ee('title')
 			color: $color-white
+			font-size: 16px
+
+			+min(lg)
+				font-size: 18px
+
+		+max(sm)
+			text-align: center
+			+ee('inner')
+				display: inline-flex
+				align-items: center
+				justify-content: center
+				+size(198px, 174px)
+				+bg('../img/work-item.png')
 
 		+min(sm)
-			+absolute
-
+			+absolute(125px)
 			+m('1')
+				left: 77px
+			+m('2')
+				left: 303px
+			+m('3')
+				left: 555px
+
+		+min(md)
+			top: 125px
+			+m('1')
+				left: 155px
+			+m('2')
+				left: 380px
+			+m('3')
+				left: 630px
 
 		+min(lg)
 			top: 145px

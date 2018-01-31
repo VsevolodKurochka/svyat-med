@@ -1,16 +1,31 @@
+-
+	var workTitle = 'Як ми працюємо';
+	var works = [
+		{
+			mod: '1',
+			img: 'img/work1.svg',
+			title: 'Замовляєте'
+		},
+		{
+			mod: '2',
+			img: 'img/work2.svg',
+			title: 'Підтверджуєте'
+		},
+		{
+			mod: '3',
+			img: 'img/work3.svg',
+			title: 'Отримуєте'
+		}
+	];
+
 +b.SECTION.work
 	.container
-		+e.H3.title.title-md Як ми працюємо
+		+e.H3.title.title-md=workTitle
 		+e.content
-			+e.item._1
-				+e.item-header
-					+e.item-icon(src="img/work1.svg")
-				+e.P.item-title Замовляєте
-			+e.item._2
-				+e.item-header
-					+e.item-icon(src="img/work2.svg")
-				+e.P.item-title Підтверджуєте
-			+e.item._3
-				+e.item-header
-					+e.item-icon(src="img/work3.svg")
-				+e.P.item-title Отримуєте
+			each work in works
+				+e.item(class="_" + work.mod)
+					+e.item-inner
+						+e.item-content
+							+e.item-header
+								+e.item-icon(src=work.img)
+							+e.P.item-title=work.title
