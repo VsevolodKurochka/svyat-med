@@ -16,7 +16,10 @@
 			%why-size
 				+size(100%, 320px)
 			%why-block
-				border: 20px solid $color-white
+				border: 10px solid $color-white
+
+				+min(sm)
+					border-width: 20px
 
 		@extend %why-size
 
