@@ -5,7 +5,11 @@
 		title: 'Про нас',
 		subtitle: 'Контакти',
 		email: 'Partynuts2017@gmail.com',
-		phone: '+380734505904'
+		phone: '+380734505904',
+		facebook: {
+			link: 'https://www.facebook.com/pg/PartyNuts/reviews/',
+			img: 'img/facebook.png'
+		}
 	}
 	
 	var reviews = [
@@ -46,3 +50,5 @@
 						+e.P.info-subtitle=info.subtitle
 						+e.A.info-link(href=info.email)=info.email
 						+e.A.info-link(href=info.phone)=info.phone
+						+e.A.info-facebook(href=info.facebook.link)
+							img(src=info.facebook.img)
