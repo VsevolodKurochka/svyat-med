@@ -3,18 +3,19 @@
 	
 	background-color: #191919
 
+	+bg('../img/bg-contact.png', 50% 0)
+
+	background-position-x: 0
+
+	@media screen
+		background-attachment: fixed
+
+	+padding-y(45px)
+
+	+min(sm)
+		+padding-y(70px)
 
 	+e('title')
 		text-align: center
 		color: $color-white
-		margin-bottom: 30px
-	
-	+e('container')
-		+padding-y(45px)
-		+bg('../img/bg-contact.png')
-
-		+min(sm)
-			+padding-y(70px)
-
-			@media screen
-				background-attachment: fixed
+		margin-bottom: 30px			
