@@ -1,0 +1,58 @@
++b('review')
+	+padding-y(45px)
+	
+	+e('title')
+		margin-bottom: 30px
+		text-align: center
+		color: $color-brand-1
+
+	+e('container')
+
+		+min(sm)
+
+			+padding-x(45px)
+
+	+e('content')
+		padding: 30px 15px
+		background-color: $color-white
+		box-shadow: 0 0 20px 0 #ddd
+
+	+e('item')
+		text-align: center
+
+		+ee('title')
+			margin-bottom: 10px
+			font-weight: bold
+			font-size: 19px
+
+		+ee('content')
+			font-size: 16px
+			+padding-x(15px)
+			margin-bottom: 15px
+
+	+e('items')
+		+relative
+
+		.owl
+			&-nav
+				+absolute(null, null, 16px, null)
+				+size(250px, 21px)
+				left: 50%
+				margin-left: -125px
+			&-prev,
+			&-next
+				+absolute(0, null, null, null)
+				+size(11px, 20px)
+				+bg('../img/arrow-review.svg')
+				+transition
+
+			&-prev
+				left: 0
+				&:hover
+					left: -5px
+
+			&-next
+				right: 0
+				transform: scaleX(-1)
+				&:hover
+					right: 5px

@@ -1,0 +1,38 @@
+-
+	var reviewTitle = 'Відгуки';
+	var infoTitle = 'Про нас';
+
+	
+	var reviews = [
+		{
+			image: 'img/review1.png',
+			title: 'Анатолій Павлюк',
+			content: 'Брав на Святого Миколая своїм малим. Доставили швидко. Діти з радістю посмакували :) '
+		},
+		{
+			image: 'img/review2.png',
+			title: 'Анатолій Павлюк',
+			content: 'Брав на Святого Миколая своїм малим. Доставили швидко. Діти з радістю посмакували :) '
+		},
+		{
+			image: 'img/review3.png',
+			title: 'Анатолій Павлюк',
+			content: 'Брав на Святого Миколая своїм малим. Доставили швидко. Діти з радістю посмакували :) '
+		}
+	];
+
++b.SECTION.review
+	+e.container.container
+		+e.content
+			.row
+				+e.column._review.col-12.col-sm-7
+					+e.H3.title.title-md=reviewTitle
+					+e.items__.owl-carousel
+						each review in reviews
+							+e.item
+								+e.P.item-title=review.title
+								+e.item-content
+									p=review.content
+								+e.item-footer
+									+e.item-image(src=review.image)
+				+e.column._info.col-12.col-sm-5
