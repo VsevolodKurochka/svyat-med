@@ -1,22 +1,31 @@
 +b('why')
+	+padding-y(45px)
+	background-color: #191919
+
+	+e('title')
+		margin-top: 0
+		color: #909090
+		text-align: center
+		margin-bottom: 45px
+
 	+e('column')
 		margin-bottom: 30px
 
 	+e('item')
 		@at-root
-			%composition-size
+			%why-size
 				+size(100%, 320px)
-			%composition-block
-				border: 20px solid $color-brand-1
+			%why-block
+				border: 20px solid $color-white
 
-		@extend %composition-size
+		@extend %why-size
 
 		+ee('front')
 			text-align: center
 			background-color: $color-white
 
-			@extend %composition-size
-			@extend %composition-block
+			@extend %why-size
+			@extend %why-block
 
 			+ee('image')
 				+size(100%)
@@ -27,15 +36,17 @@
 			align-items: center
 			justify-content: center
 			text-align: center
+			color: $color-white
 
-			@extend %composition-size
-			@extend %composition-block
+			@extend %why-size
+			@extend %why-block
 
 			&:before
 				content: ''
 				+absolute(0, null, null, 0)
 				+size(100%)
 				background-color: transparentize($color-brand-1, 0.5)
+				z-index: 1
 
 			+ee('background')
 				+absolute(0,null,null,0)
@@ -46,18 +57,23 @@
 			+ee('content')
 				+relative
 				z-index: 1
-		
+
 			+ee('title')
-				font-size: 18px
+				padding-bottom: 15px
+				margin-bottom: 15px
+				border-bottom: 1px solid
+				font-size: 24px
 				font-weight: bold
+				font-family: 'Segoesc'
 
 				+min(lg)
-					font-size: 24px
+					font-size: 40px
 
 			+ee('text')
-				font-size: 12px
-				+padding-x(5px)
+				font-size: 15px
+				color: $color-black
+				background-color: $color-white
+				+padding-x(15px)
 
 				+min(lg)
-					font-size: 13px
-					+padding-x(15px)
+					font-size: 20px

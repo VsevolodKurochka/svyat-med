@@ -9,18 +9,18 @@
 		},
 		{
 			img: 'img/why2.jpg',
-			title: 'Корисно',
-			content: 'Має цілющі властивості'
+			title: 'Смачно',
+			content: 'Кожна ложка - як маленька цукерка'
 		},
 		{
 			img: 'img/why3.jpg',
-			title: 'Корисно',
-			content: 'Має цілющі властивості'
+			title: 'Ситно',
+			content: 'Усього 3 ложки і ви більше не голодні'
 		},
 		{
 			img: 'img/why4.jpg',
-			title: 'Корисно',
-			content: 'Має цілющі властивості'
+			title: 'Надійно',
+			content: '100% натуральні продукти'
 		}
 	];
 
@@ -30,7 +30,7 @@
 		+e.content.row
 			each reason in reasons
 				+e.column.col-12.col-sm-6
-					+e.item.flip-container(ontouchstart="this.classList.toggle('hover');")
+					+e.item.flip-container.vertical(ontouchstart="this.classList.toggle('hover');")
 						+e.item-flipper.flipper
 							+e.item-front.front
 								+e.item-front-image(src=reason.img)
