@@ -5,22 +5,26 @@
 		{
 			img: 'img/why1.jpg',
 			title: 'Корисно',
-			content: 'Має цілющі властивості'
+			content: 'Має цілющі властивості',
+			delay: '0.05s'
 		},
 		{
 			img: 'img/why2.jpg',
 			title: 'Смачно',
-			content: 'Кожна ложка - як маленька цукерка'
+			content: 'Кожна ложка - як маленька цукерка',
+			delay: '0.1s'
 		},
 		{
 			img: 'img/why3.jpg',
 			title: 'Ситно',
-			content: 'Усього 3 ложки і ви більше не голодні'
+			content: 'Усього 3 ложки і ви більше не голодні',
+			delay: '0.2s'
 		},
 		{
 			img: 'img/why4.jpg',
 			title: 'Надійно',
-			content: '100% натуральні продукти'
+			content: '100% натуральні продукти',
+			delay: '0.3s'
 		}
 	];
 
@@ -29,7 +33,7 @@
 		+e.H3.title.title-md=whyTitle
 		+e.content.row
 			each reason in reasons
-				+e.column.col-12.col-sm-6
+				+e.column.col-12.col-sm-6.wow.fadeInUp(data-wow-delay=reason.delay)
 					+e.item.flip-container.vertical(ontouchstart="this.classList.toggle('hover');")
 						+e.item-flipper.flipper
 							+e.item-front.front
