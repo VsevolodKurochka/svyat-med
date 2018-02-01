@@ -34,7 +34,7 @@
 	+e.container.container
 		+e.content
 			.row
-				+e.column._review.col-12.col-sm-7
+				+e.column._review.col-12.col-sm-7.wow.fadeInUp
 					+e.H3.title.title-md=reviewTitle
 					+e.items__.owl-carousel
 						each review in reviews
@@ -44,7 +44,7 @@
 									p=review.content
 								+e.item-footer
 									+e.item-image(src=review.image)
-				+e.column._info.col-12.col-sm-5
+				+e.column._info.col-12.col-sm-5.wow.fadeInUp
 					+e.H3.title.title-md=info.title
 					+e.info
 						+e.P.info-subtitle=info.subtitle
