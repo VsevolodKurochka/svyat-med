@@ -193,5 +193,7 @@
 		new Modal();
 
 		new Navigation();
+
+		new WOW().init();
 	});
 }());

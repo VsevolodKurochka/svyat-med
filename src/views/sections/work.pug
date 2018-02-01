@@ -4,17 +4,20 @@
 		{
 			mod: '1',
 			img: 'img/work1.svg',
-			title: 'Замовляєте'
+			title: 'Замовляєте',
+			delay: '0.05s'
 		},
 		{
 			mod: '2',
 			img: 'img/work2.svg',
-			title: 'Підтверджуєте'
+			title: 'Підтверджуєте',
+			delay: '0.15s'
 		},
 		{
 			mod: '3',
 			img: 'img/work3.svg',
-			title: 'Отримуєте'
+			title: 'Отримуєте',
+			delay: '0.25s'
 		}
 	];
 
@@ -23,7 +26,7 @@
 		+e.H3.title.title-md=workTitle
 		+e.content
 			each work in works
-				+e.item(class="_" + work.mod)
+				+e.item(data-wow-delay='#{work.delay}' class="_" + work.mod + " wow fadeInUp")
 					+e.item-inner
 						+e.item-content
 							+e.item-header
