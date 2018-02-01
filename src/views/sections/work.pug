@@ -26,7 +26,7 @@
 		+e.H3.title.title-md=workTitle
 		+e.content
 			each work in works
-				+e.item(data-wow-delay='#{work.delay}' class="_" + work.mod + " wow fadeInUp")
+				+e.item(data-wow-delay=work.delay class="_" + work.mod + " wow fadeInUp")
 					+e.item-inner
 						+e.item-content
 							+e.item-header
