@@ -30,6 +30,13 @@
 			+padding-x(15px)
 			margin-bottom: 15px
 
+			+min(sm)
+				min-height: 100px
+
+		+ee('image')
+			+size(50px)
+			border-radius: 100%
+
 	+e('items')
 		+relative
 
@@ -42,9 +49,14 @@
 			&-prev,
 			&-next
 				+absolute(0, null, null, null)
-				+size(11px, 20px)
-				+bg('../img/arrow-review.svg')
+				+size(30px)
 				+transition
+				&:before
+					content: ''
+					+absolute(50%, null, null, 50%)
+					transform: translate(-50%, -50%)
+					+size(11px, 20px)
+					+bg('../img/arrow-review.svg')
 
 			&-prev
 				left: 0
